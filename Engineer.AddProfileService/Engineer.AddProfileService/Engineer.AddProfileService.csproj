@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <NoWin32Manifest>true</NoWin32Manifest>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
     <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.8.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.6" />
   </ItemGroup>
 
 
@@ -37,6 +39,9 @@
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="Middleware\" />
     <None Remove="Azure.Messaging.ServiceBus" />
+    <None Remove="StackExchange.Redis" />
+    <None Remove="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <None Remove="Cache\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -48,6 +53,7 @@
     <Folder Include="Config\" />
     <Folder Include="CustomException\" />
     <Folder Include="Middleware\" />
+    <Folder Include="Cache\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Swagger\Extentions.cs" />
